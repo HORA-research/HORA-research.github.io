@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://HORA-research.github.io/sitemap.xml
+Sitemap: https://hora-research.github.io/sitemap.xml

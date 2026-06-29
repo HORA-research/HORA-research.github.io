@@ -1,7 +1,7 @@
 
 const currentUrl = window.location.href;
-const siteUrl = "https://HORA-research.github.io";
-let updatedUrl = currentUrl.replace("https://HORA-research.github.io", "");
+const siteUrl = "https://hora-research.github.io";
+let updatedUrl = currentUrl.replace("https://hora-research.github.io", "");
 if (currentUrl.length == updatedUrl.length && currentUrl.startsWith("http://127.0.0.1")) {
   const otherSiteUrl = siteUrl.replace("localhost", "127.0.0.1");
   updatedUrl = currentUrl.replace(otherSiteUrl + "", "");
