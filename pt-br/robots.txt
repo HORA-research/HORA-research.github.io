@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://hora-research.github.io/sitemap.xml
