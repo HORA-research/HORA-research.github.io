@@ -6,10 +6,10 @@ title: HORA # the website title (if blank, full name will be used instead)
 first_name: 
 middle_name: 
 last_name: 
-keywords: database modelling # add your own keywords or leave empty
-icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
+icon: logo/LOGO-icone.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-url: https://hora-research.github.io # the base hostname & protocol for your site
+url: https://HORA-research.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: true # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
@@ -47,7 +47,7 @@ external_services:
 navbar_fixed: true
 footer_fixed: true
 search_enabled: true
-socials_in_search: true
+socials_in_search: false
 posts_in_search: true
 bib_search: true
 
@@ -111,10 +111,6 @@ giscus:
   light_theme: light # name of the light color scheme (preferred works well with al-folio light mode)
   emit_metadata: 0
 
-# Disqus comments (DEPRECATED)
-disqus_shortname: multi-language-al-folio # put your disqus shortname
-# https://help.disqus.com/en/articles/1717111-what-s-a-shortname
-
 # External sources.
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
@@ -143,23 +139,22 @@ newsletter:
 # -----------------------------------------------------------------------------
 # Collections
 # -----------------------------------------------------------------------------
-
+# permalink : this is needed to avoid adding language here, like /:collection/:lang/:title/
 collections:
   books:
-    output: true
-    # this is needed to avoid adding language here, like /:collection/:lang/:title/
+    output: false
     permalink: /:collection/:title/
   news:
     defaults:
       layout: post
     output: true
-    # this is needed to avoid adding language here, like /:collection/:lang/:title/
     permalink: /:collection/:title/
   projects:
     output: true
-    # this is needed to avoid adding language here, like /:collection/:lang/:title/
     permalink: /:collection/:title/
-
+  courses:
+    output: true
+    permalink: /:collection/:title/
 # -----------------------------------------------------------------------------
 # Jekyll settings
 # -----------------------------------------------------------------------------
@@ -180,30 +175,23 @@ kramdown:
 # Includes & excludes
 include: ["_pages", "_scripts"]
 exclude:
+  - _arc/
   - bin/
   - CONTRIBUTING.md
-  - CONTRIBUTING.pt-br.md
   - CUSTOMIZE.md
   - CUSTOMIZE.pt-br.md
   - Dockerfile
   - docker-compose.yml
   - docker-compose-slim.yml
   - FAQ.md
-  - FAQ.pt-br.md
   - Gemfile
   - Gemfile.lock
   - INSTALL.md
-  - INSTALL.pt-br.md
   - LICENSE
-  - lighthouse_results/
   - package.json
   - package-lock.json
-  - _pages/en-us/about_einstein.md
-  - _pages/pt-br/about_einstein.md
   - purgecss.config.js
   - README.md
-  - README.pt-br.md
-  - readme_preview/
   - UPGRADING.md
   - vendor
 keep_files:
@@ -283,18 +271,12 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
-
   style: apa
   locale: en
 
   source: /_bibliography/
   bibliography: papers.bib
   bibliography_template: bib
-  # Note: if you have latex math in your bibtex, the latex filter
-  # preprocessing may conflict with MathJAX if the latter is enabled.
-  # See https://github.com/alshedivat/al-folio/issues/357.
   bibtex_filters: [latex, smallcaps, superscript]
 
   replace_strings: true
@@ -347,7 +329,7 @@ filtered_bibtex_keywords:
   ]
 
 # Maximum number of authors to be shown for each publication (more authors are visible on click)
-max_author_limit: 3 # leave blank to always show all authors
+max_author_limit: # leave blank to always show all authors
 more_authors_animation_delay: 10 # more authors are revealed on click using animation; smaller delay means faster animation
 
 # Enables publication thumbnails. If disabled, none of the publications will display thumbnails, even if specified in the bib entry.
@@ -368,12 +350,13 @@ external_links:
 # Jekyll Polyglot
 # -----------------------------------------------------------------------------
 
-languages: ["en-us", "pt-br", "fr-ca"]
-default_lang: "en-us"
-exclude_from_localization: ["assets"]
+languages: ["en", "fr"]
+default_lang: "en"
+exclude_from_localization: ["javascript", "images", "css", "public", "sitemap", "CNAME"]
 lang_from_path: true
 country_flag: false # set true for allowing flag symbol in language toggle
-parallel_localization: false
+parallel_localization: true
+fallback_canonical_to_default_lang: true
 
 # -----------------------------------------------------------------------------
 # Responsive WebP Images
@@ -654,27 +637,3 @@ third_party_libraries:
       css: "https://cdn.jsdelivr.net/npm/venobox@{{version}}/dist/venobox.min.css"
       js: "https://cdn.jsdelivr.net/npm/venobox@{{version}}/dist/venobox.min.js"
     version: "2.1.8"
-
-# -----------------------------------------------------------------------------
-# Get external JSON data
-# -----------------------------------------------------------------------------
-
-jekyll_get_json:
-  - data: resume_en-us
-    json: assets/json/resume_en-us.json # it can also be an url
-  - data: resume_pt-br
-    json: assets/json/resume_pt-br.json # it can also be an url
-
-jsonresume:
-  - basics
-  - work
-  - education
-  - publications
-  - projects
-  - volunteer
-  - awards
-  - certificates
-  - skills
-  - languages
-  - interests
-  - references

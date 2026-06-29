@@ -1,0 +1,2 @@
+I am particularly interested in knowledge representation, the evolution of ontologies, and Semantic Web technologies.
+My research focuses on managing the impact of semantic changes in ontologies, a topic that fascinates me because of its theoretical and practical implications for intelligent systems. Gaining a deep understanding of complex concepts and contributing to sustainable and innovative solutions is what motivates me in my research. Outside of my studies, I enjoy reading, exploring new cultural horizons, going on hikes, and volunteering.

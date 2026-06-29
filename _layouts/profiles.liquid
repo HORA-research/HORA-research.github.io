@@ -4,6 +4,7 @@ layout: page
 <div class="post">
   <article>
     {% if page.profiles %}
+      <h3>Current members</h3>
       {% for profile in page.profiles %}
         <hr>
         <div class="profile float-{% if profile.align == 'left' %}left{% else %}right{% endif %}">
@@ -32,5 +33,7 @@ layout: page
         </div>
       {% endfor %}
     {% endif %}
+
+    <div class="clearfix">{{ content }}</div>
   </article>
 </div>

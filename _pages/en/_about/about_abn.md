@@ -1,0 +1,3 @@
+I am a research intern at the University of Sherbrooke and a graduate engineer in embedded telecommunications. I am interested in designing IT solutions and DevSecOps approaches, with a strong interest in robust, secure, and automated systems. Throughout my career, I have participated in several projects in DevOps, application development, database design, and machine learning.
+Curious and motivated by solving complex problems, I enjoy gaining a deep understanding of how systems work and improving their efficiency.
+On a personal level, I love nature and discovering new cultures, which fosters an open mind and enriches my worldview. I’m also interested in visual creation through digital media and art design, where I can express my creativity.
