@@ -49,7 +49,7 @@ profiles:
     image_circular: true # crops the image to make it circular
     more_info: >
       <p>Sakithyan Ragavan</p>
-      <p>Intern Mitacs Globalink Summer 2026<</p>
+      <p>Intern Mitacs Globalink Summer 2026</p>
   - align: left
     image: 
     content: _about/about_abn.md

@@ -4,7 +4,7 @@ layout: page
 permalink: /repositories/
 title: Repositories
 description: The GitHub repositories of the group.
-nav: true
+nav: false
 nav_order: 5
 ---
 

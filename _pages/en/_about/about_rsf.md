@@ -1,0 +1,2 @@
+After two internships at GRIIS — one in 2022 for my first-year Master's internship and another in 2024 for my final year Master's internship — I joined the student community in winter 2025 to complete a Master's degree in Software Engineering. My research focuses on developing a visual approach for using ontological models in healthcare that will facilitate querying relational ontological databases linked to multiple health data sources for users unfamiliar with ontologies.
+Outside of my research, I enjoy nature walks and am passionate about anime.

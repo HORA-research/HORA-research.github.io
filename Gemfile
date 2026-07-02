@@ -23,9 +23,8 @@ group :jekyll_plugins do
     gem 'jekyll-tabs'
     gem 'jekyll-terser', :git => "https://github.com/RobertoJBeltran/jekyll-terser.git"
     gem 'jekyll-toc'
-    gem 'jekyll-twitter-plugin'
-    gem 'jemoji'
-
+    #gem 'jekyll-twitter-plugin'
+    #gem 'jemoji'
     gem 'classifier-reborn'  # used for content categorization during the build
 end
 
@@ -39,4 +38,10 @@ group :other_plugins do
     # gem 'terser'         # used by jekyll-terser
     # gem 'unicode_utils' -- should be already installed by jekyll
     # gem 'webrick' -- should be already installed by jekyll
+end
+
+# Gems for al-folio plugins
+group :al_folio_plugins do
+    gem 'al_cookie'
+    gem 'al_analytics'
 end

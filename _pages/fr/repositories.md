@@ -4,7 +4,7 @@ layout: page
 permalink: /repositories/
 title: Dépôts
 description: Les dépôts GitHub du groupe.
-nav: true
+nav: false
 nav_order: 5
 ---
 
